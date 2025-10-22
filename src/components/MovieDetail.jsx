@@ -536,10 +536,10 @@ const MovieDetail = () => {
                       {review.userId.username.charAt(0).toUpperCase()}
                     </div>
                     <div className="reviewer-details">
-                      <span className="reviewer-name">
+                      <Link to={`/user/${review.userId._id}`} className="reviewer-name">
                         {review.userId.username}
                         <MdVerified className="verified-icon" />
-                      </span>
+                      </Link>
                       <span className="review-date">
                         <FaCalendar /> {formatDate(review.date)}
                       </span>
